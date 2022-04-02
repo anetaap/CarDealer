@@ -110,6 +110,7 @@
       <Folder Include="Images" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="cars.json" />
       <Content Include="imageNames.json" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
