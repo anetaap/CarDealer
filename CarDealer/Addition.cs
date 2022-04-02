@@ -8,6 +8,7 @@ namespace CarDealer
     public partial class Addition : Form
     {
         private Form1 _frontPage;
+        private Settings _settings;
 
         private int _id;
         
@@ -22,9 +23,10 @@ namespace CarDealer
             InitializeComponent();
 
             _frontPage = form1;
+            _settings = settings;
 
-            _imageNames = settings.Imagenames;
-            _cars = settings.Cars;
+            _imageNames = _settings.Imagenames;
+            _cars = _settings.Cars;
 
             _id = _imageNames.Count;
         }
@@ -66,8 +68,6 @@ namespace CarDealer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _imageNames[_id] = _fileNames;
-            
             _carDetails.Add(textBox1.Text);
             _carDetails.Add(textBox2.Text);
             _carDetails.Add(textBox3.Text);
@@ -78,9 +78,15 @@ namespace CarDealer
             _carDetails.Add(textBox7.Text);
             _carDetails.Add(textBox8.Text);
             _carDetails.Add(textBox9.Text);
-            
 
             _cars[_id] = _carDetails;
+            _imageNames[_id] = _fileNames;
+            
+            _settings.ImageNamesToJson();
+            _settings.CarsToJson();
+            
+            Close();
+            _frontPage.Show();
         }
     }
 }
