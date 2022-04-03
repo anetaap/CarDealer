@@ -11,7 +11,8 @@ namespace CarDealer
         private Settings _settings;
 
         private int _id;
-        
+        private String _saveDirectory;
+
         private Dictionary<int, List<String>> _imageNames;
         private Dictionary<int, List<String>> _cars;
 
@@ -29,6 +30,7 @@ namespace CarDealer
             _cars = _settings.Cars;
 
             _id = _imageNames.Count;
+            _saveDirectory = $@"../../Images\{_id}";
         }
 
         private void Addition_Load(object sender, EventArgs e)
@@ -38,18 +40,17 @@ namespace CarDealer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String saveDirectory = $@"../../Images\{_id}";
             using (OpenFileDialog openFileDialog1 = new OpenFileDialog())
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    if (!Directory.Exists(saveDirectory))
+                    if (!Directory.Exists(_saveDirectory))
                     {
-                        Directory.CreateDirectory(saveDirectory);
+                        Directory.CreateDirectory(_saveDirectory);
                     }
 
                     String fileName = Path.GetFileName(openFileDialog1.FileName);
-                    String fileSavePath = Path.Combine(saveDirectory,fileName);
+                    String fileSavePath = Path.Combine(_saveDirectory,fileName);
                     if (openFileDialog1.FileName != null)
                     {
                         File.Copy(openFileDialog1.FileName, fileSavePath, true);
@@ -63,7 +64,7 @@ namespace CarDealer
         private void button2_Click(object sender, EventArgs e)
         {
             _frontPage.Show();
-            Close();
+            Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -87,6 +88,25 @@ namespace CarDealer
             
             Close();
             _frontPage.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+            textBox9.Text = "";
+
+            foreach (string fileName in _fileNames)
+            {
+                File.Delete(Path.Combine(_saveDirectory,fileName));
+            }
+            _fileNames.Clear();
         }
     }
 }

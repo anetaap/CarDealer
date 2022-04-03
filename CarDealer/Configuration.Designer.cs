@@ -31,10 +31,16 @@ namespace CarDealer
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Configuration
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1184, 714);
+            this.Name = "Configuration";
             this.Text = "Configuration";
+            this.ResumeLayout(false);
         }
 
         #endregion

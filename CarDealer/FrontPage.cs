@@ -14,6 +14,7 @@ namespace CarDealer
     {
         private Addition _addition;
         private Settings _settings;
+        private Reservation _reservation;
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace CarDealer
             _settings = new Settings();
 
             _addition = new Addition(this, _settings);
+            _reservation = new Reservation(this, _settings);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -32,6 +34,17 @@ namespace CarDealer
         {  
             Hide();
             _addition.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
+            _reservation.Show();
         }
     }
 }
