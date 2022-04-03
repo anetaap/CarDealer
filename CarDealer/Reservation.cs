@@ -23,10 +23,10 @@ namespace CarDealer
                 comboBox1.Items.Add(informations);
             }
         }
-        public Reservation(Form1 frontPage, Settings settings)
+        public Reservation(Form1 frontPage)
         {
             _frontPage = frontPage;
-            _settings = settings;
+            _settings = new Settings();
             
             InitializeComponent();
 

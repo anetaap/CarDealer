@@ -113,11 +113,11 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Images" />
-    </ItemGroup>
-    <ItemGroup>
       <Content Include="cars.json" />
       <Content Include="imageNames.json" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Properties\Images" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

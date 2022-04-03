@@ -8,7 +8,7 @@ namespace CarDealer
     public partial class Addition : Form
     {
         private Form1 _frontPage;
-        private Settings _settings;
+        private Settings _settings = new Settings();
 
         private int _id;
         private String _saveDirectory;
@@ -19,18 +19,11 @@ namespace CarDealer
         private List<String> _fileNames = new List<string>();
         private List<String> _carDetails = new List<string>();
         
-        public Addition(Form1 form1, Settings settings)
+        public Addition(Form1 form1)
         {
             InitializeComponent();
 
             _frontPage = form1;
-            _settings = settings;
-
-            _imageNames = _settings.Imagenames;
-            _cars = _settings.Cars;
-
-            _id = _imageNames.Count;
-            _saveDirectory = $@"../../Images\{_id}";
         }
 
         private void Addition_Load(object sender, EventArgs e)
@@ -69,6 +62,17 @@ namespace CarDealer
 
         private void button1_Click(object sender, EventArgs e)
         {
+            _settings.Reload();
+            
+            _imageNames = _settings.Imagenames;
+            _cars = _settings.Cars;
+            _id = _cars.Count;
+            
+            _saveDirectory = $@"../../Properties\Images\{_id}";
+            
+            _carDetails.Clear();
+            _imageNames.Clear();
+
             _carDetails.Add(textBox1.Text);
             _carDetails.Add(textBox2.Text);
             _carDetails.Add(textBox3.Text);
@@ -82,15 +86,28 @@ namespace CarDealer
 
             _cars[_id] = _carDetails;
             _imageNames[_id] = _fileNames;
-            
+
             _settings.ImageNamesToJson();
             _settings.CarsToJson();
             
-            Close();
+            Clean();
+            
+            Hide();
             _frontPage.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+            Clean();
+            
+            foreach (string fileName in _fileNames)
+            {
+                File.Delete(Path.Combine(_saveDirectory,fileName));
+            }
+            _fileNames.Clear();
+        }
+
+        private void Clean()
         {
             textBox1.Text = "";
             textBox2.Text = "";
@@ -101,12 +118,6 @@ namespace CarDealer
             textBox7.Text = "";
             textBox8.Text = "";
             textBox9.Text = "";
-
-            foreach (string fileName in _fileNames)
-            {
-                File.Delete(Path.Combine(_saveDirectory,fileName));
-            }
-            _fileNames.Clear();
         }
     }
 }

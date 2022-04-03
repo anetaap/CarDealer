@@ -13,16 +13,15 @@ namespace CarDealer
     public partial class Form1 : Form
     {
         private Addition _addition;
-        private Settings _settings;
         private Reservation _reservation;
+        private Configuration _configuration;
         public Form1()
         {
             InitializeComponent();
-
-            _settings = new Settings();
-
-            _addition = new Addition(this, _settings);
-            _reservation = new Reservation(this, _settings);
+            
+            _reservation = new Reservation(this);
+            _configuration = new Configuration(this);
+            _addition = new Addition(this);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,7 +37,8 @@ namespace CarDealer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
+            _configuration.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
