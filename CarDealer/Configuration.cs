@@ -12,8 +12,6 @@ namespace CarDealer
             InitializeComponent();
 
             _frontPage = frontPage;
-            
-            Display();
         }
 
         private void Display()
@@ -42,6 +40,9 @@ namespace CarDealer
                     comboBox3.Items.Add(engine);
                 }
                 
+                String informations = i + ", " + brand + ", " + model + ", " + engine + ", " + price;
+
+                listBox1.Items.Add(informations);
             }
         }
 
@@ -56,6 +57,15 @@ namespace CarDealer
         {
             _frontPage.Show();
             Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String brand = comboBox1.Text;
+            String model = comboBox2.Text;
+            String engine = comboBox3.Text;
+            
+            listBox1.Items.Clear();
         }
     }
 }
