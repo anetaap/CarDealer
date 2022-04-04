@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace CarDealer
@@ -59,13 +60,81 @@ namespace CarDealer
             Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //changing available items after choosing a brand
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String brand = comboBox1.Text;
-            String model = comboBox2.Text;
-            String engine = comboBox3.Text;
-            
+            comboBox2.Items.Clear();
+            comboBox3.Items.Clear();
             listBox1.Items.Clear();
+            
+            
+            foreach (KeyValuePair<int,List<string>> car in _settings.Cars)
+            {
+                if (car.Value[0] == comboBox1.Text)
+                {
+                    comboBox2.Items.Add(car.Value[1]);
+                    comboBox3.Items.Add(car.Value[2]);
+                    
+                    String informations = car.Key + ", " + car.Value[0] + ", " + car.Value[1] + ", " + car.Value[2] 
+                                          + ", " + car.Value[6];
+
+                    listBox1.Items.Add(informations);
+
+                }
+            }
+        }
+
+        //changing available items after choosing a model
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox3.Items.Clear();
+            listBox1.Items.Clear();
+            
+            
+            foreach (KeyValuePair<int,List<string>> car in _settings.Cars)
+            {
+                if (car.Value[1] == comboBox2.Text)
+                {
+                    comboBox1.Items.Add(car.Value[0]);
+                    comboBox3.Items.Add(car.Value[2]);
+                    
+                    String informations = car.Key + ", " + car.Value[0] + ", " + car.Value[1] + ", " + car.Value[2] 
+                                          + ", " + car.Value[6];
+
+                    listBox1.Items.Add(informations);
+
+                }
+            }
+        }
+        
+        //changing available items after choosing an engine
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
+            listBox1.Items.Clear();
+            
+            
+            foreach (KeyValuePair<int,List<string>> car in _settings.Cars)
+            {
+                if (car.Value[2] == comboBox3.Text)
+                {
+                    comboBox1.Items.Add(car.Value[0]);
+                    comboBox2.Items.Add(car.Value[1]);
+                    
+                    String informations = car.Key + ", " + car.Value[0] + ", " + car.Value[1] + ", " + car.Value[2] 
+                                          + ", " + car.Value[6];
+
+                    listBox1.Items.Add(informations);
+
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Display();
         }
     }
 }
