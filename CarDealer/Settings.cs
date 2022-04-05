@@ -64,8 +64,8 @@ namespace CarDealer
 
         public void Reload()
         {
-            _imageNames.Clear();
-            _cars.Clear();
+            //_imageNames.Clear();
+            //_cars.Clear();
             
             CarsFromJson();
             ImageNamesFromJson();

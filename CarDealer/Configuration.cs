@@ -9,7 +9,7 @@ namespace CarDealer
     public partial class Configuration : Form
     {
         private int _id;
-        private int _iterator = 0;
+        private int _iterator;
         private String _imageDirectory;
 
         private Form1 _frontPage;
@@ -61,7 +61,7 @@ namespace CarDealer
         {
             WindowState = FormWindowState.Maximized;
             _settings.Reload();
-            Display();
+            button3.PerformClick();
         }
 
         // BACK BUTTON
@@ -167,6 +167,8 @@ namespace CarDealer
             _id = int.Parse(array[0]);
 
             _carImages = _settings.Imagenames[_id];
+            
+            
 
             _imageDirectory = $@"../../Images\{_id}\";
 

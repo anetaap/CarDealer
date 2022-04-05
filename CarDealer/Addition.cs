@@ -36,7 +36,6 @@ namespace CarDealer
         {
             using (OpenFileDialog openFileDialog1 = new OpenFileDialog())
             {
-                //openFileDialog1.Filter = "Image| *.jpg;*.png";
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     if (!Directory.Exists(_saveDirectory))
@@ -75,13 +74,10 @@ namespace CarDealer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _carDetails.Clear();
-            _imageNames.Clear();
 
             _carDetails.Add(textBox1.Text);
             _carDetails.Add(textBox2.Text);
             _carDetails.Add(textBox3.Text);
-            _carDetails.Add(textBox4.Text);
             _carDetails.Add(textBox4.Text);
             _carDetails.Add(textBox5.Text);
             _carDetails.Add(textBox6.Text);
