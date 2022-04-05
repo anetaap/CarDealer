@@ -29,12 +29,14 @@ namespace CarDealer
         private void Addition_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
+            CreateCar();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog1 = new OpenFileDialog())
             {
+                //openFileDialog1.Filter = "Image| *.jpg;*.png";
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     if (!Directory.Exists(_saveDirectory))
@@ -60,7 +62,7 @@ namespace CarDealer
             Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CreateCar()
         {
             _settings.Reload();
             
@@ -68,8 +70,11 @@ namespace CarDealer
             _cars = _settings.Cars;
             _id = _cars.Count;
             
-            _saveDirectory = $@"../../Properties\Images\{_id}";
-            
+            _saveDirectory = $@"../../Images\{_id}";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             _carDetails.Clear();
             _imageNames.Clear();
 
