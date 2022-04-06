@@ -126,6 +126,7 @@
       <Content Include="imageNames.json" />
       <Content Include="Images\0\civic.jpg" />
       <Content Include="Images\0\civic2.jpg" />
+      <Content Include="Reservations.json" />
       <Content Include="wishList.json" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

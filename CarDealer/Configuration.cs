@@ -285,7 +285,7 @@ namespace CarDealer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _wish = new WishList( _settings, _id);
+            _wish = new WishList(_settings, _id);
             
             _wish.Show();
         }

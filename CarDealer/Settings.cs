@@ -10,26 +10,29 @@ namespace CarDealer
         private String _imagePaths = @"../../imageNames.json";
         private String _carsPath = @"../../cars.json";
         private String _wishListPath = @"../../wishList.json";
+        private String _reservationPath = @"../../Reservations.json";
         
         private Dictionary<int, List<String>> _imageNames;
         private Dictionary<int, List<String>> _cars;
         private Dictionary<String, List<String>> _wishList;
+        private Dictionary<String, List<String>> _dates;
 
         private StreamWriter _imageWriter;
         private StreamWriter _carsWriter;
         private StreamWriter _wishListWriter;
+        private StreamWriter _reservationsWriter;
 
         private StreamReader _imageReader;
         private StreamReader _carsReader;
         private StreamReader _wishListReader;
+        private StreamReader _reservationsListReader;
 
         public Settings()
         {
-            ImageNamesFromJson();
-            CarsFromJson();
-            WishListFromJson();
+            Reload();
         }
         
+        // TO JSON FUNCTIONS
         public void ImageNamesToJson()
         {
             _imageWriter= new StreamWriter(_imagePaths);
@@ -57,6 +60,17 @@ namespace CarDealer
             
             _wishListWriter.Close();
         }
+        public void ReservationsToJson()
+        {
+            _reservationsWriter= new StreamWriter(_reservationPath);
+            
+            String newR = JsonConvert.SerializeObject(_dates);
+            _reservationsWriter.Write(newR);
+            
+            _reservationsWriter.Close();
+        }
+        
+        // FROM JSON FUNCTIONS
         public void CarsFromJson()
         {
             _carsReader = new StreamReader(_carsPath);
@@ -83,20 +97,30 @@ namespace CarDealer
             
             _wishListReader.Close();
         }
+        public void ReservationsFromJson()
+        {
+            _reservationsListReader = new StreamReader(_wishListPath);
+            String json = _reservationsListReader.ReadToEnd();
+            _dates =  JsonConvert.DeserializeObject<Dictionary<String, List<String>>>(json);
+            
+            _reservationsListReader.Close();
+        }
 
+        // RELOAD FUNCTION
         public void Reload()
         {
             CarsFromJson();
             ImageNamesFromJson();
             WishListFromJson();
+            ReservationsFromJson();
         }
 
+        // GETTERS AND SETTERS
         public Dictionary<int, List<string>> Imagenames
         {
             get => _imageNames;
             set => _imageNames = value;
         }
-        
         public Dictionary<int, List<string>> Cars
         {
             get => _cars;
@@ -107,5 +131,12 @@ namespace CarDealer
             get => _wishList;
             set => _wishList = value;
         }
+        
+        public Dictionary<string, List<string>> Dates
+        {
+            get => _dates;
+            set => _dates = value;
+        }
+
     }
 }
