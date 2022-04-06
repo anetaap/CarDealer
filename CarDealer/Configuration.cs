@@ -14,9 +14,12 @@ namespace CarDealer
 
         private Form1 _frontPage;
         private Settings _settings = new Settings();
+        private WishList _wish;
 
         private List<String> _carImages;
 
+        private Image _image;
+        
         public Configuration(Form1 frontPage)
         {
             InitializeComponent();
@@ -167,14 +170,14 @@ namespace CarDealer
             _id = int.Parse(array[0]);
 
             _carImages = _settings.Imagenames[_id];
-            
-            
 
             _imageDirectory = $@"../../Images\{_id}\";
 
             String fileName = _carImages[0];
+            
+            _image = Image.FromFile(Path.Combine(_imageDirectory, fileName));
 
-            pictureBox1.Image = new Bitmap(Path.Combine(_imageDirectory, fileName));
+            SetImg();
 
             var car = _settings.Cars[_id];
 
@@ -204,7 +207,7 @@ namespace CarDealer
         // IMAGES DISPLAYING 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (pictureBox1.Image == null)
+            if (pictureBox1.BackgroundImage == null)
                 MessageBox.Show(@"First choose a car!");
             else if (_carImages.Count > 1)
             {
@@ -215,10 +218,76 @@ namespace CarDealer
                 
                 String fileName = _carImages[_iterator - 1];
 
-                pictureBox1.Image = Image.FromFile(Path.Combine(_imageDirectory, fileName));
+                _image = Image.FromFile(Path.Combine(_imageDirectory, fileName));
+                
+                SetImg();
                 
                 _iterator--;
             }
+        }
+        
+        private void SetImg()
+        {
+            try
+            {
+                Rescale(_image);
+            } catch (Exception)
+            {
+                // ignored
+                pictureBox1.BackgroundImage = null;
+            }
+        }
+        
+        private void Rescale(Image image)
+        {
+            pictureBox1.BackgroundImage = new Bitmap(image, CalcSize(image));
+
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
+        }
+        
+        private Size CalcSize(Image image)
+        {
+            int x = image.Width;
+            int y = image.Height;
+            int xPic = Math.Min(pictureBox1.Width, pictureBox1.Height);
+            int yPic = Math.Min(pictureBox1.Width, pictureBox1.Height);
+
+            int xChange = 0;
+            int yChange = 0;
+
+            while (x - xChange > xPic - 10)
+            {
+                xChange += 10;
+            }
+            
+            while (y - yChange > yPic - 10)
+            {
+                yChange += 10;
+            }
+
+            if (xChange > yChange)
+            {
+                y = y * (x - xChange) / x;
+                x -= xChange;
+            } else
+            {
+                x = x * (y - yChange) / y;
+                y -= yChange;
+            }
+
+            return new Size((int) (x*1.5), (int)(y*1.5));
+        }
+
+        private void Configuration_Resize(object sender, EventArgs e)
+        {
+            SetImg();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _wish = new WishList( _settings, _id);
+            
+            _wish.Show();
         }
     }
 }

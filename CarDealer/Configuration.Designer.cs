@@ -41,6 +41,7 @@ namespace CarDealer
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@ namespace CarDealer
             this.label1.Font = new System.Drawing.Font("Cambria Math", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.label1.Location = new System.Drawing.Point(-1, -83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1674, 220);
+            this.label1.Size = new System.Drawing.Size(1682, 220);
             this.label1.TabIndex = 1;
             this.label1.Text = "Car Finder";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -62,7 +63,7 @@ namespace CarDealer
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(988, 275);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(602, 28);
+            this.comboBox1.Size = new System.Drawing.Size(610, 28);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "Brand";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -74,7 +75,7 @@ namespace CarDealer
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(990, 328);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(602, 28);
+            this.comboBox2.Size = new System.Drawing.Size(610, 28);
             this.comboBox2.TabIndex = 3;
             this.comboBox2.Text = "Model";
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
@@ -86,7 +87,7 @@ namespace CarDealer
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(988, 374);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(602, 28);
+            this.comboBox3.Size = new System.Drawing.Size(610, 28);
             this.comboBox3.TabIndex = 4;
             this.comboBox3.Text = "Engine";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
@@ -110,7 +111,7 @@ namespace CarDealer
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.label2.Location = new System.Drawing.Point(988, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(602, 63);
+            this.label2.Size = new System.Drawing.Size(610, 63);
             this.label2.TabIndex = 6;
             this.label2.Text = "Filters";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,7 +120,7 @@ namespace CarDealer
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.MintCream;
-            this.button2.Location = new System.Drawing.Point(1386, 1013);
+            this.button2.Location = new System.Drawing.Point(1394, 980);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(204, 38);
             this.button2.TabIndex = 8;
@@ -134,7 +135,7 @@ namespace CarDealer
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.button3.Location = new System.Drawing.Point(988, 421);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(602, 59);
+            this.button3.Size = new System.Drawing.Size(610, 59);
             this.button3.TabIndex = 9;
             this.button3.Text = "Reset";
             this.button3.UseVisualStyleBackColor = false;
@@ -143,6 +144,7 @@ namespace CarDealer
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.pictureBox1.Location = new System.Drawing.Point(37, 534);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(931, 484);
@@ -158,15 +160,28 @@ namespace CarDealer
             this.listBox2.ItemHeight = 31;
             this.listBox2.Location = new System.Drawing.Point(988, 534);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(602, 407);
+            this.listBox2.Size = new System.Drawing.Size(610, 407);
             this.listBox2.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.MintCream;
+            this.button1.Location = new System.Drawing.Point(994, 980);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(204, 38);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Add to Wish List";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Configuration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1672, 1055);
+            this.ClientSize = new System.Drawing.Size(1680, 1055);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -180,9 +195,12 @@ namespace CarDealer
             this.Name = "Configuration";
             this.Text = "Car finder";
             this.Load += new System.EventHandler(this.Configuration_Load);
+            this.Resize += new System.EventHandler(this.Configuration_Resize);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.ListBox listBox2;
 

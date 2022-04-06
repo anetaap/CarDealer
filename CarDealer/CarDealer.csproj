@@ -77,6 +77,12 @@
           <DependentUpon>Reservation.cs</DependentUpon>
         </Compile>
         <Compile Include="Settings.cs" />
+        <Compile Include="WishList.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="WishList.Designer.cs">
+          <DependentUpon>WishList.cs</DependentUpon>
+        </Compile>
         <EmbeddedResource Include="Addition.resx">
           <DependentUpon>Addition.cs</DependentUpon>
         </EmbeddedResource>
@@ -98,6 +104,9 @@
         <EmbeddedResource Include="Reservation.resx">
           <DependentUpon>Reservation.cs</DependentUpon>
         </EmbeddedResource>
+        <EmbeddedResource Include="WishList.resx">
+          <DependentUpon>WishList.cs</DependentUpon>
+        </EmbeddedResource>
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
@@ -117,6 +126,7 @@
       <Content Include="imageNames.json" />
       <Content Include="Images\0\civic.jpg" />
       <Content Include="Images\0\civic2.jpg" />
+      <Content Include="wishList.json" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
