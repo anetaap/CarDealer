@@ -44,7 +44,7 @@ namespace CarDealer
         }
         public void CarsToJson()
         {
-            _carsWriter= new StreamWriter(_wishListPath);
+            _carsWriter= new StreamWriter(_carsPath);
             
             String newCars = JsonConvert.SerializeObject(_cars);
             _carsWriter.Write(newCars);
