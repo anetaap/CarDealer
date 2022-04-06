@@ -163,45 +163,48 @@ namespace CarDealer
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String carInf = listBox1.GetItemText(listBox1.SelectedItem);
+            if (listBox1.SelectedIndex != -1)
+            {
+                String carInf = listBox1.GetItemText(listBox1.SelectedItem);
 
-            String[] array = carInf.Split(',');
+                String[] array = carInf.Split(',');
 
-            _id = int.Parse(array[0]);
+                _id = int.Parse(array[0]);
 
-            _carImages = _settings.Imagenames[_id];
+                _carImages = _settings.Imagenames[_id];
 
-            _imageDirectory = $@"../../Images\{_id}\";
+                _imageDirectory = $@"../../Images\{_id}\";
 
-            String fileName = _carImages[0];
+                String fileName = _carImages[0];
             
-            _image = Image.FromFile(Path.Combine(_imageDirectory, fileName));
+                _image = Image.FromFile(Path.Combine(_imageDirectory, fileName));
 
-            SetImg();
+                SetImg();
 
-            var car = _settings.Cars[_id];
+                var car = _settings.Cars[_id];
 
-            String brand = $"Brand: {car[0]}";
-            String model = $"Model: {car[1]}";
-            String engine = $"Engine: {car[2]}";
-            String paintColor = $"Paint Color: {car[3]}";
-            String yop = $"Year of production: {car[4]}";
-            String carMileage = $"Car Mileage: {car[5]}";
-            String price = $"Price: {car[6]}";
-            String phoneNumber = $"Phone Number: {car[7]}";
-            String eMail = $"E-mail: {car[8]}";
+                String brand = $"Brand: {car[0]}";
+                String model = $"Model: {car[1]}";
+                String engine = $"Engine: {car[2]}";
+                String paintColor = $"Paint Color: {car[3]}";
+                String yop = $"Year of production: {car[4]}";
+                String carMileage = $"Car Mileage: {car[5]}";
+                String price = $"Price: {car[6]}";
+                String phoneNumber = $"Phone Number: {car[7]}";
+                String eMail = $"E-mail: {car[8]}";
 
-            listBox2.Items.Clear();
+                listBox2.Items.Clear();
 
-            listBox2.Items.Add(brand);
-            listBox2.Items.Add(model);
-            listBox2.Items.Add(engine);
-            listBox2.Items.Add(paintColor);
-            listBox2.Items.Add(yop);
-            listBox2.Items.Add(carMileage);
-            listBox2.Items.Add(price);
-            listBox2.Items.Add(phoneNumber);
-            listBox2.Items.Add(eMail);
+                listBox2.Items.Add(brand);
+                listBox2.Items.Add(model);
+                listBox2.Items.Add(engine);
+                listBox2.Items.Add(paintColor);
+                listBox2.Items.Add(yop);
+                listBox2.Items.Add(carMileage);
+                listBox2.Items.Add(price);
+                listBox2.Items.Add(phoneNumber);
+                listBox2.Items.Add(eMail);
+            }
         }
 
         // IMAGES DISPLAYING 
@@ -226,6 +229,7 @@ namespace CarDealer
             }
         }
         
+        // RESIZE 
         private void SetImg()
         {
             try

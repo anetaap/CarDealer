@@ -120,6 +120,7 @@ namespace CarDealer
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.MintCream;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.button2.Location = new System.Drawing.Point(1394, 980);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(204, 38);
@@ -167,6 +168,7 @@ namespace CarDealer
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.MintCream;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.button1.Location = new System.Drawing.Point(994, 980);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(204, 38);

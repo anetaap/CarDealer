@@ -22,16 +22,17 @@ namespace CarDealer
         public Reservation(Form1 frontPage)
         {
             _frontPage = frontPage;
-            _settings = new Settings();
-
-            _wishLists = _settings.WishList;
-            _reservations = _settings.Dates;
             
             InitializeComponent();
         }
 
         private void Reservation_Load(object sender, EventArgs e)
         {
+            _settings = new Settings();
+
+            _wishLists = _settings.WishList;
+            _reservations = _settings.Dates;
+            
             WindowState = FormWindowState.Maximized;
             _settings.Reload();
         }
@@ -60,7 +61,9 @@ namespace CarDealer
         private void button2_Click(object sender, EventArgs e)
         {
             Hide();
-            
+            Clean();
+            _settings.Reload();
+
             _frontPage.Show();
         }
 
@@ -161,6 +164,7 @@ namespace CarDealer
             return 0;
         }
 
+        // CONFIRMING RESERVATION 
         private void button1_Click(object sender, EventArgs e)
         {
             if (_date == null)
@@ -175,6 +179,13 @@ namespace CarDealer
             _settings.ReservationsToJson();
             
             MessageBox.Show($@"Successfully reserved testing drive for {_date}");
+        }
+        
+        //CLEAN
+        private void Clean()
+        {
+            textBox1.Text = "";
+            comboBox1.Items.Clear();
         }
     }
 }

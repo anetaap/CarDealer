@@ -137,12 +137,12 @@ namespace CarDealer
             // listBox1
             // 
             this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
+            this.listBox1.Font = new System.Drawing.Font("Cambria Math", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 95;
-            this.listBox1.Location = new System.Drawing.Point(621, 713);
+            this.listBox1.ItemHeight = 84;
+            this.listBox1.Location = new System.Drawing.Point(486, 713);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(868, 289);
+            this.listBox1.Size = new System.Drawing.Size(1003, 256);
             this.listBox1.TabIndex = 10;
             // 
             // Reservation

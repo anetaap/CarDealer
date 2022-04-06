@@ -31,7 +31,8 @@ namespace CarDealer
             if (_wishLists.ContainsKey(_name))
             {
                 _wishList = _wishLists[_name];
-                _wishList.Add(_id.ToString());
+                if(!_wishList.Contains(_id.ToString()))
+                    _wishList.Add(_id.ToString());
             }
             else
             {
