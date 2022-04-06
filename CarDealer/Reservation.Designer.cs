@@ -48,7 +48,7 @@ namespace CarDealer
             this.label1.Font = new System.Drawing.Font("Cambria Math", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.label1.Location = new System.Drawing.Point(-87, -78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1422, 215);
+            this.label1.Size = new System.Drawing.Size(1796, 215);
             this.label1.TabIndex = 1;
             this.label1.Text = "Reservation";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -56,10 +56,11 @@ namespace CarDealer
             // comboBox1
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(155, 340);
+            this.comboBox1.Location = new System.Drawing.Point(151, 489);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(964, 24);
+            this.comboBox1.Size = new System.Drawing.Size(1338, 103);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.Text = "Car list";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -67,7 +68,7 @@ namespace CarDealer
             // monthCalendar1
             // 
             this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.monthCalendar1.Location = new System.Drawing.Point(155, 405);
+            this.monthCalendar1.Location = new System.Drawing.Point(151, 713);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
@@ -76,28 +77,32 @@ namespace CarDealer
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.BackColor = System.Drawing.Color.MintCream;
-            this.label2.Location = new System.Drawing.Point(155, 208);
+            this.label2.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(155, 262);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 38);
+            this.label2.Size = new System.Drawing.Size(210, 91);
             this.label2.TabIndex = 5;
             this.label2.Text = "Name and Surname";
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(398, 205);
+            this.textBox1.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
+            this.textBox1.Location = new System.Drawing.Point(398, 262);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(721, 38);
+            this.textBox1.Size = new System.Drawing.Size(1095, 91);
             this.textBox1.TabIndex = 6;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.Color.MintCream;
-            this.button1.Location = new System.Drawing.Point(155, 726);
+            this.button1.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(155, 932);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 61);
+            this.button1.Size = new System.Drawing.Size(325, 111);
             this.button1.TabIndex = 7;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = false;
@@ -107,9 +112,10 @@ namespace CarDealer
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.MintCream;
-            this.button2.Location = new System.Drawing.Point(790, 726);
+            this.button2.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(1164, 932);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(325, 61);
+            this.button2.Size = new System.Drawing.Size(325, 111);
             this.button2.TabIndex = 8;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = false;
@@ -119,9 +125,10 @@ namespace CarDealer
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.BackColor = System.Drawing.Color.MintCream;
-            this.button3.Location = new System.Drawing.Point(547, 278);
+            this.button3.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
+            this.button3.Location = new System.Drawing.Point(581, 371);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 30);
+            this.button3.Size = new System.Drawing.Size(392, 97);
             this.button3.TabIndex = 9;
             this.button3.Text = "Apply";
             this.button3.UseVisualStyleBackColor = false;
@@ -129,12 +136,13 @@ namespace CarDealer
             // 
             // listBox1
             // 
-            this.listBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(663, 405);
+            this.listBox1.ItemHeight = 95;
+            this.listBox1.Location = new System.Drawing.Point(621, 713);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(452, 212);
+            this.listBox1.Size = new System.Drawing.Size(868, 289);
             this.listBox1.TabIndex = 10;
             // 
             // Reservation
@@ -142,7 +150,7 @@ namespace CarDealer
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1222, 866);
+            this.ClientSize = new System.Drawing.Size(1596, 1055);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

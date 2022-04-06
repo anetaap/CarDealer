@@ -18,7 +18,25 @@ namespace CarDealer
 
         private Dictionary<String, List<String>> _wishLists;
         private Dictionary<String, List<String>> _reservations;
+        
+        public Reservation(Form1 frontPage)
+        {
+            _frontPage = frontPage;
+            _settings = new Settings();
 
+            _wishLists = _settings.WishList;
+            _reservations = _settings.Dates;
+            
+            InitializeComponent();
+        }
+
+        private void Reservation_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            _settings.Reload();
+        }
+        
+        // DISPLAY FUNCTION
         private void DisplayCars(List<String> wishList)
         {
 
@@ -37,22 +55,6 @@ namespace CarDealer
                 
             }
         }
-        public Reservation(Form1 frontPage)
-        {
-            _frontPage = frontPage;
-            _settings = new Settings();
-
-            _wishLists = _settings.WishList;
-            _reservations = _settings.Dates;
-            
-            InitializeComponent();
-        }
-
-        private void Reservation_Load(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            _settings.Reload();
-        }
 
         // BACK BUTTON
         private void button2_Click(object sender, EventArgs e)
@@ -65,6 +67,9 @@ namespace CarDealer
         // APPLY BUTTON
         private void button3_Click(object sender, EventArgs e)
         {
+            comboBox1.Items.Clear();
+            listBox1.Items.Clear();
+            
             _name = textBox1.Text;
             
             if (_wishLists.ContainsKey(_name))
@@ -94,7 +99,10 @@ namespace CarDealer
 
             if (_reservations.ContainsKey(_id))
             {
-                foreach (string date in _dates)
+                listBox1.Items.Clear();
+                listBox1.Items.Add(@"UNAVAILABLE DATES:");
+
+                foreach (string date in _reservations[_id])
                 {
                     listBox1.Items.Add(date);
                 }
@@ -102,6 +110,7 @@ namespace CarDealer
 
         }
 
+        // CHOOSING A DATE
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         { 
             if (comboBox1.SelectedIndex == -1)
@@ -117,30 +126,53 @@ namespace CarDealer
             
             _date = monthCalendar1.SelectionRange.Start.Date.ToString("MM/dd/yyyy");
 
-            if (_settings.Dates.ContainsKey(_id))
+            if (UnavailableDates(_date) == 0)
             {
-                _dates = _settings.Dates[_id];
-                _dates.Add(_date);
+                if (_settings.Dates.ContainsKey(_id))
+                {
+                    _dates = _reservations[_id];
+                    _dates.Add(_date);
+                }
+                else
+                {
+                    _dates = new List<string>();
+                    _dates.Add(_date);
+                }
             }
             else
             {
-                _dates = new List<string>();
-                _dates.Add(_date);
+                _date = null;
             }
+
+        }
+        
+        // CHECKING IF DATE IS AVAILABLE FUNCTION
+        private int UnavailableDates(String chosenDate)
+        {
+            foreach (var item in listBox1.Items)
+            {
+                if (chosenDate == (string) item)
+                {
+                    MessageBox.Show(@"THIS DATE IS ALREADY TAKEN!");
+                    return 1;
+                }   
+            }
+
+            return 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (_dates == null)
+            if (_date == null)
             {
                 MessageBox.Show(@"Choose date");
                 return;
             }
 
-            _settings.Dates[_id] = _dates;
+            _reservations[_id] = _dates;
+            _settings.Dates[_id] = _reservations[_id];
+
             _settings.ReservationsToJson();
-            
-            
             
             MessageBox.Show($@"Successfully reserved testing drive for {_date}");
         }

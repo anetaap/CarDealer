@@ -99,7 +99,7 @@ namespace CarDealer
         }
         public void ReservationsFromJson()
         {
-            _reservationsListReader = new StreamReader(_wishListPath);
+            _reservationsListReader = new StreamReader(_reservationPath);
             String json = _reservationsListReader.ReadToEnd();
             _dates =  JsonConvert.DeserializeObject<Dictionary<String, List<String>>>(json);
             
