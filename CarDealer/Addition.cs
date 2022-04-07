@@ -64,7 +64,7 @@ namespace CarDealer
         private void CreateCar()
         {
             _settings.Reload();
-            
+
             _imageNames = _settings.Imagenames;
             _cars = _settings.Cars;
             _id = _cars.Count;
@@ -74,6 +74,7 @@ namespace CarDealer
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CreateCar();
 
             _carDetails.Add(textBox1.Text);
             _carDetails.Add(textBox2.Text);
@@ -87,6 +88,9 @@ namespace CarDealer
 
             _cars[_id] = _carDetails;
             _imageNames[_id] = _fileNames;
+
+            _settings.Cars = _cars;
+            _settings.Imagenames = _imageNames;
 
             _settings.ImageNamesToJson();
             _settings.CarsToJson();
@@ -119,6 +123,11 @@ namespace CarDealer
             textBox7.Text = "";
             textBox8.Text = "";
             textBox9.Text = "";
+            
+            _imageNames.Clear();
+            _cars.Clear();
+            _carDetails.Clear();
+            _fileNames.Clear();
         }
     }
 }

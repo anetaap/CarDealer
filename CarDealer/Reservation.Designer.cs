@@ -58,7 +58,7 @@ namespace CarDealer
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(151, 489);
+            this.comboBox1.Location = new System.Drawing.Point(155, 457);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(1338, 103);
             this.comboBox1.TabIndex = 3;
@@ -68,7 +68,7 @@ namespace CarDealer
             // monthCalendar1
             // 
             this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.monthCalendar1.Location = new System.Drawing.Point(151, 713);
+            this.monthCalendar1.Location = new System.Drawing.Point(149, 610);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
@@ -99,10 +99,10 @@ namespace CarDealer
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.Color.MintCream;
-            this.button1.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(155, 932);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.button1.Location = new System.Drawing.Point(151, 932);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 111);
+            this.button1.Size = new System.Drawing.Size(635, 67);
             this.button1.TabIndex = 7;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = false;
@@ -112,10 +112,10 @@ namespace CarDealer
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.MintCream;
-            this.button2.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(1164, 932);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.button2.Location = new System.Drawing.Point(854, 932);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(325, 111);
+            this.button2.Size = new System.Drawing.Size(635, 67);
             this.button2.TabIndex = 8;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = false;
@@ -125,10 +125,10 @@ namespace CarDealer
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.BackColor = System.Drawing.Color.MintCream;
-            this.button3.Font = new System.Drawing.Font("Cambria Math", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
-            this.button3.Location = new System.Drawing.Point(581, 371);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.button3.Location = new System.Drawing.Point(617, 373);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(392, 97);
+            this.button3.Size = new System.Drawing.Size(392, 52);
             this.button3.TabIndex = 9;
             this.button3.Text = "Apply";
             this.button3.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@ namespace CarDealer
             this.listBox1.Font = new System.Drawing.Font("Cambria Math", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 84;
-            this.listBox1.Location = new System.Drawing.Point(486, 713);
+            this.listBox1.Location = new System.Drawing.Point(486, 610);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(1003, 256);
             this.listBox1.TabIndex = 10;

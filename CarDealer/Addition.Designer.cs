@@ -70,6 +70,7 @@ namespace CarDealer
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBox1.Location = new System.Drawing.Point(428, 147);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
@@ -80,6 +81,7 @@ namespace CarDealer
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBox2.Location = new System.Drawing.Point(428, 209);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Multiline = true;
@@ -90,6 +92,7 @@ namespace CarDealer
             // textBox3
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBox3.Location = new System.Drawing.Point(428, 271);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Multiline = true;
@@ -100,6 +103,7 @@ namespace CarDealer
             // textBox4
             // 
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBox4.Location = new System.Drawing.Point(428, 335);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Multiline = true;
@@ -111,6 +115,7 @@ namespace CarDealer
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (238)));
             this.label2.Location = new System.Drawing.Point(103, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(224, 52);
@@ -122,6 +127,7 @@ namespace CarDealer
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label3.Location = new System.Drawing.Point(103, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(224, 52);
@@ -133,6 +139,7 @@ namespace CarDealer
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label4.Location = new System.Drawing.Point(103, 271);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(224, 52);
@@ -144,6 +151,7 @@ namespace CarDealer
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label5.Location = new System.Drawing.Point(103, 335);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(224, 52);
@@ -155,6 +163,7 @@ namespace CarDealer
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label6.Location = new System.Drawing.Point(103, 649);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(224, 52);
@@ -166,6 +175,7 @@ namespace CarDealer
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label7.Location = new System.Drawing.Point(103, 585);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(224, 52);
@@ -177,6 +187,7 @@ namespace CarDealer
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label8.Location = new System.Drawing.Point(103, 522);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(224, 52);
@@ -188,6 +199,7 @@ namespace CarDealer
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label9.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label9.Location = new System.Drawing.Point(103, 461);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(224, 52);
@@ -198,6 +210,7 @@ namespace CarDealer
             // textBox9
             // 
             this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBox9.Location = new System.Drawing.Point(428, 649);
             this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox9.Multiline = true;
@@ -208,6 +221,7 @@ namespace CarDealer
             // textBox8
             // 
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBox8.Location = new System.Drawing.Point(428, 585);
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox8.Multiline = true;
@@ -218,6 +232,7 @@ namespace CarDealer
             // textBox7
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBox7.Location = new System.Drawing.Point(428, 522);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox7.Multiline = true;
@@ -228,6 +243,7 @@ namespace CarDealer
             // textBox6
             // 
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBox6.Location = new System.Drawing.Point(428, 461);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Multiline = true;
@@ -239,6 +255,7 @@ namespace CarDealer
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.label10.Location = new System.Drawing.Point(103, 398);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(224, 52);
@@ -249,6 +266,7 @@ namespace CarDealer
             // textBox5
             // 
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.textBox5.Location = new System.Drawing.Point(428, 398);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Multiline = true;
@@ -259,6 +277,7 @@ namespace CarDealer
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.button1.Location = new System.Drawing.Point(103, 798);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
@@ -271,6 +290,7 @@ namespace CarDealer
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.button2.Location = new System.Drawing.Point(897, 798);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
@@ -283,6 +303,7 @@ namespace CarDealer
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.button3.Location = new System.Drawing.Point(103, 725);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
@@ -295,6 +316,7 @@ namespace CarDealer
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.button4.Location = new System.Drawing.Point(505, 798);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
