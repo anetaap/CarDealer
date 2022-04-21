@@ -186,6 +186,8 @@ namespace CarDealer
         {
             textBox1.Text = "";
             comboBox1.Items.Clear();
+            comboBox1.Text = "";
+            listBox1.Items.Clear(); 
         }
     }
 }

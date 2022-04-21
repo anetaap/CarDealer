@@ -37,6 +37,8 @@ namespace CarDealer
                 String brand = _settings.Cars[i][0];
                 String model = _settings.Cars[i][1];
                 String engine = _settings.Cars[i][2];
+                String color = _settings.Cars[i][3];
+                String year = _settings.Cars[i][4];
                 String price = _settings.Cars[i][6];
 
                 if (!comboBox1.Items.Contains(brand))
@@ -52,6 +54,14 @@ namespace CarDealer
                 if (!comboBox3.Items.Contains(engine))
                 {
                     comboBox3.Items.Add(engine);
+                }
+                if (!comboBox4.Items.Contains(color))
+                {
+                    comboBox4.Items.Add(color);
+                }
+                if (!comboBox5.Items.Contains(year))
+                {
+                    comboBox5.Items.Add(year);
                 }
 
                 String informations = i + ", " + brand + ", " + model + ", " + engine + ", " + price;
@@ -82,6 +92,8 @@ namespace CarDealer
         {
             comboBox2.Items.Clear();
             comboBox3.Items.Clear();
+            comboBox4.Items.Clear();
+            comboBox5.Items.Clear();
             listBox1.Items.Clear();
 
 
@@ -91,6 +103,8 @@ namespace CarDealer
                 {
                     comboBox2.Items.Add(car.Value[1]);
                     comboBox3.Items.Add(car.Value[2]);
+                    comboBox4.Items.Add(car.Value[3]);
+                    comboBox5.Items.Add(car.Value[4]);
 
                     String informations = car.Key + ", " + car.Value[0] + ", " + car.Value[1] + ", " + car.Value[2]
                                           + ", " + car.Value[6];
@@ -106,6 +120,8 @@ namespace CarDealer
         {
             comboBox1.Items.Clear();
             comboBox3.Items.Clear();
+            comboBox4.Items.Clear();
+            comboBox5.Items.Clear();
             listBox1.Items.Clear();
 
 
@@ -115,6 +131,8 @@ namespace CarDealer
                 {
                     comboBox1.Items.Add(car.Value[0]);
                     comboBox3.Items.Add(car.Value[2]);
+                    comboBox4.Items.Add(car.Value[3]);
+                    comboBox5.Items.Add(car.Value[4]);
 
                     String informations = car.Key + ", " + car.Value[0] + ", " + car.Value[1] + ", " + car.Value[2]
                                           + ", " + car.Value[6];
@@ -130,6 +148,8 @@ namespace CarDealer
         {
             comboBox1.Items.Clear();
             comboBox2.Items.Clear();
+            comboBox4.Items.Clear();
+            comboBox5.Items.Clear();
             listBox1.Items.Clear();
 
 
@@ -139,6 +159,8 @@ namespace CarDealer
                 {
                     comboBox1.Items.Add(car.Value[0]);
                     comboBox2.Items.Add(car.Value[1]);
+                    comboBox4.Items.Add(car.Value[3]);
+                    comboBox5.Items.Add(car.Value[4]);
 
                     String informations = car.Key + ", " + car.Value[0] + ", " + car.Value[1] + ", " + car.Value[2]
                                           + ", " + car.Value[6];
@@ -147,6 +169,64 @@ namespace CarDealer
 
                 }
             }
+        }
+        
+        //changing available items after choosing a paint color
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
+            comboBox3.Items.Clear();
+            comboBox5.Items.Clear();
+            listBox1.Items.Clear();
+
+
+            foreach (KeyValuePair<int, List<string>> car in _settings.Cars)
+            {
+                if (car.Value[3] == comboBox4.Text)
+                {
+                    comboBox1.Items.Add(car.Value[0]);
+                    comboBox2.Items.Add(car.Value[1]);
+                    comboBox3.Items.Add(car.Value[2]);
+                    comboBox5.Items.Add(car.Value[4]);
+                    
+                    String informations = car.Key + ", " + car.Value[0] + ", " + car.Value[1] + ", " + car.Value[2]
+                                          + ", " + car.Value[6];
+
+                    listBox1.Items.Add(informations);
+
+                }
+            }
+        }
+        
+        //changing available items after choosing year of production
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox2.Items.Clear();
+            comboBox3.Items.Clear();
+            comboBox4.Items.Clear();
+            listBox1.Items.Clear();
+
+
+            foreach (KeyValuePair<int, List<string>> car in _settings.Cars)
+            {
+                if (car.Value[4] == comboBox4.Text)
+                {
+                    comboBox1.Items.Add(car.Value[0]);
+                    comboBox2.Items.Add(car.Value[1]);
+                    comboBox3.Items.Add(car.Value[2]);
+                    comboBox4.Items.Add(car.Value[3]);
+                    
+                    String informations = car.Key + ", " + car.Value[0] + ", " + car.Value[1] + ", " + car.Value[2]
+                                          + ", " + car.Value[6];
+
+                    listBox1.Items.Add(informations);
+
+                }
+            }
+
         }
 
         // RESET BUTTON
