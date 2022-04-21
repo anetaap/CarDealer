@@ -225,7 +225,7 @@ namespace CarDealer
             this.Name = "Configuration";
             this.Text = "Car finder";
             this.Load += new System.EventHandler(this.Configuration_Load);
-            this.Resize += new System.EventHandler(this.Configuration_Load);
+            this.Resize += new System.EventHandler(this.Configuration_Resize);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
         }
